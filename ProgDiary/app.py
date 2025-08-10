@@ -26,7 +26,4 @@ while (user_input := input(menu)) !="3": # Loop until user selects '3' to exit
         entries = get_entries() # View existing entries in the diary
         view_entries(entries) # Display the entries
     else:
-        print("Invalid selection, please try again.")        
-
-
-# 
+        print("Invalid selection, please try again.")
