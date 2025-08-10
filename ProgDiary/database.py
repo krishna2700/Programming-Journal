@@ -1,6 +1,7 @@
 import sqlite3
 # This module handles the database operations for the ProgDiary application
 connection = sqlite3.connect("data.db")
+connection.row_factory = sqlite3.Row # Set row factory to return rows as dictionaries
 
 def create_table():
     with connection: # Create a table for diary entries if it doesn't exist
