@@ -15,7 +15,7 @@ def prompt_new_entry():
 
 def view_entries(entries):
     for entry in entries: # Loop through each entry in the list
-        print(f"{entry[1]}\n{entry[0]}\n\n") # Print the date and content of each entry
+        print(f"{entry['date']}\n{entry['content']}\n\n") # Print the date and content of each entry
      
 print(welcome) # Print welcome message
 create_table()
