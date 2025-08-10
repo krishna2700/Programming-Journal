@@ -1,4 +1,4 @@
-from database import add_entry , get_entries
+from database import create_table, add_entry , get_entries
 
 menu = """ Please select the following options:
 1. Add a new entry for today
@@ -15,9 +15,10 @@ def prompt_new_entry():
 
 def view_entries(entries):
     for entry in entries: # Loop through each entry in the list
-        print(f"{entry['date']}\n{entry['content']}\n\n") # Display each entry with a newline for readability
+        print(f"{entry[1]}\n{entry[0]}\n\n") # Print the date and content of each entry
      
-
+print(welcome) # Print welcome message
+create_table()
 while (user_input := input(menu)) !="3": # Loop until user selects '3' to exit
     if user_input == "1":
         prompt_new_entry() # Prompt user to add a new entry
